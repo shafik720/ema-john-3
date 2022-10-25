@@ -15,7 +15,11 @@ const Body = () => {
         <div className="body-div">            
             <div className="body-left">
             <h1>Total Product Found : {products.length} </h1>
-                <Products></Products>
+                {
+                    products.map(index=><Products 
+                        index ={index}
+                    ></Products>)
+                }
             </div>
             <div className="body-right">
                 <Cart></Cart>
