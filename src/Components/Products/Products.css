@@ -31,9 +31,15 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    transition: all 0.1s ;
 }
 .card-bottom p{
     /* padding: 12px; */
     /* font-size: 18px; */
     font-weight: 600;
+}
+
+.card-bottom:hover{
+    background-color: orange;
+    color: dimgray;
 }
