@@ -10,7 +10,13 @@ const Body = () => {
         fetch('products.json')
         .then(res=>res.json())
         .then(data=>setProducts(data))
-    },[])
+    },[]);
+
+    let [cart, setCart] = useState([])
+    function handleCart(element){
+        let newCart = [...cart, element];
+        setCart(newCart);
+    }
     return (
         <div className="body-div">            
             <div className="body-left">
@@ -18,11 +24,12 @@ const Body = () => {
                     products.map(index=><Products 
                         index ={index}
                         key = {index.id}
+                        handleCart = {handleCart}
                     ></Products>)
                 }
             </div>
             <div className="body-right">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>           
             
         </div>

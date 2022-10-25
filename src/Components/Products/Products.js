@@ -3,9 +3,10 @@ import './Products.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
-const Products = (props) => {
-    console.log(props.index);
+const Products = (props) => {    
     let {name, price, img, ratings, seller, shipping} = props.index;
+
+    
     return (
         <div className="cardX">
             <div className="card-header">
@@ -17,7 +18,8 @@ const Products = (props) => {
                 <p>Ratings : ${ratings} star </p>
                 <p>Manufacturer: {seller} </p>
             </div>
-            <div draggable className="card-bottom">
+
+            <div onClick={()=>props.handleCart(props.index.id)} draggable className="card-bottom">
                 <p>Add To Cart</p>
                 <span> <FontAwesomeIcon icon={faShoppingBag} /></span>
             </div>
