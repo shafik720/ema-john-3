@@ -18,6 +18,7 @@ const Body = () => {
                 {
                     products.map(index=><Products 
                         index ={index}
+                        key = {index.id}
                     ></Products>)
                 }
             </div>
