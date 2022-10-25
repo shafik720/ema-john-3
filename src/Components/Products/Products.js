@@ -1,10 +1,11 @@
 import React from 'react';
+import './Products.css'
 
 const Products = (props) => {
     console.log(props.index);
     let {name, price, img, ratings, seller, shipping} = props.index;
     return (
-        <div>
+        <div className="cardX">
             <div className="card-header">
                 <img src={img} alt=""/>
             </div>

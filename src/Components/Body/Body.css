@@ -4,3 +4,11 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
+
+.body-left{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px;
+    gap: 20px;
+
+}
