@@ -14,7 +14,6 @@ const Body = () => {
     return (
         <div className="body-div">            
             <div className="body-left">
-            <h1>Total Product Found : {products.length} </h1>
                 {
                     products.map(index=><Products 
                         index ={index}
