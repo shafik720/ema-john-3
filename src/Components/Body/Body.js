@@ -15,7 +15,10 @@ const Body = () => {
 
     useEffect(()=>{
         const  storedCart = getStoredCart();
-        console.log(storedCart)
+        for(let productId in storedCart){
+            let addedProduct = products.find(product=> product.id === productId);
+            console.log(addedProduct);
+        }
     },[])
 
     let [cart, setCart] = useState([])
