@@ -7,8 +7,7 @@
     border-radius: 5px;
 }
 
-.card-header{
-    
+.card-header{    
     margin-top: 7px;
     text-align: center;
 }
@@ -17,4 +16,8 @@
     height: 286px; */
     width: 95%;
     border-radius: 5px;
+}
+
+.card-body{
+    margin: 15px;
 }
