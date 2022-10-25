@@ -4,7 +4,7 @@ import './Body.css'
 const Body = () => {
     return (
         <div>
-            <h2>Hello from Body </h2>            
+                      
         </div>
     );
 };
