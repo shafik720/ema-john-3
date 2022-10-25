@@ -17,6 +17,7 @@ const Body = () => {
         let newCart = [...cart, element];
         setCart(newCart);
     }
+    
     return (
         <div className="body-div">            
             <div className="body-left">

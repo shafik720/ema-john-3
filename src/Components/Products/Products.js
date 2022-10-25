@@ -19,7 +19,7 @@ const Products = (props) => {
                 <p>Manufacturer: {seller} </p>
             </div>
 
-            <div onClick={()=>props.handleCart(props.index.id)} draggable className="card-bottom">
+            <div onClick={()=>props.handleCart(props.index)} draggable className="card-bottom">
                 <p>Add To Cart</p>
                 <span> <FontAwesomeIcon icon={faShoppingBag} /></span>
             </div>
