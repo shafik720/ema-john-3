@@ -26,7 +26,7 @@ const Body = () => {
         const  storedCart = getStoredCart();
         for(let productId in storedCart){
             let addedProduct = products.find(product=> product.id === productId);
-            console.log(addedProduct);
+            
         }
     },[products])
     
