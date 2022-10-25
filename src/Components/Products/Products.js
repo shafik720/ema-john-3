@@ -15,7 +15,7 @@ const Products = (props) => {
                 <p>Ratings : ${ratings} star </p>
                 <p>Manufacturer: {seller} </p>
             </div>
-            <div className="card-bottom">
+            <div draggable className="card-bottom">
                 <p>Add To Cart</p>
             </div>
         </div>
