@@ -13,13 +13,7 @@ const Body = () => {
         .then(data=>setProducts(data))
     },[]);
 
-    useEffect(()=>{
-        const  storedCart = getStoredCart();
-        for(let productId in storedCart){
-            let addedProduct = products.find(product=> product.id === productId);
-            console.log(addedProduct);
-        }
-    },[])
+    
 
     let [cart, setCart] = useState([])
     function handleCart(element){
@@ -27,6 +21,14 @@ const Body = () => {
         setCart(newCart);
         addToDb(element.id);
     }
+
+    useEffect(()=>{
+        const  storedCart = getStoredCart();
+        for(let productId in storedCart){
+            let addedProduct = products.find(product=> product.id === productId);
+            console.log(addedProduct);
+        }
+    },[products])
     
     return (
         <div className="body-div">            
