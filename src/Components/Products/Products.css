@@ -32,11 +32,15 @@
     bottom: 0;
     width: 100%;
     transition: all 0.1s ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card-bottom p{
     /* padding: 12px; */
     /* font-size: 18px; */
     font-weight: 600;
+    margin-right: 15px;
 }
 
 .card-bottom:hover{
