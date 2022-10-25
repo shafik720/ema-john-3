@@ -28,6 +28,7 @@ const getStoredCart =()=>{
     return shoppingCart;
 }
 
+
 const removeFromDb = id =>{
     const storedCart = localStorage.getItem('shopping-cart');
     if(storedCart){
