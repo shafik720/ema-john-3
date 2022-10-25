@@ -10,7 +10,10 @@ const Products = (props) => {
                 <img src={img} alt=""/>
             </div>
             <div className="card-body">
-                <h2>{name}</h2>
+                <h4>{name}</h4>
+                <p>Price : {price} </p>
+                <p>Ratings : ${ratings} star </p>
+                <p>Manufacturer: {seller} </p>
             </div>
         </div>
     );
