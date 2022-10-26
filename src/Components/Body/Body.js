@@ -15,19 +15,39 @@ const Body = () => {
 
     
 
-    let [cart, setCart] = useState([])
-    function handleCart(element){
-        let newCart = [...cart, element];
+    let [cart, setCart] = useState([]);
+    function handleCart(selectedProduct){
+        let newCart = [];
+        let exist = cart.find(product=> product.id === selectedProduct.id);
+        if(!exist){
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct];
+        }else{
+            exist.quantity = exist.quantity + 1;
+            let restProduct = cart.filter(product=>product.id !== selectedProduct.id);
+
+            newCart = [...restProduct, exist];
+        }
+
         setCart(newCart);
-        addToDb(element.id);
+        addToDb(selectedProduct.id);
     }
 
+    
     useEffect(()=>{
         const  storedCart = getStoredCart();
+        let freshCart = [];
         for(let productId in storedCart){
             let addedProduct = products.find(product=> product.id === productId);
             
+            if(addedProduct){
+                let quantity = storedCart[productId];
+                addedProduct.quantity = quantity;
+                freshCart.push(addedProduct);
+            }
         }
+        
+    setCart(freshCart);
     },[products])
     
     return (
